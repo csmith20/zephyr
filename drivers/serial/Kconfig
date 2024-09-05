@@ -204,6 +204,9 @@ rsource "Kconfig.numicro"
 
 rsource "Kconfig.sam0"
 
+source "drivers/serial/Kconfig.pic32cxsg"
+
+source "drivers/serial/Kconfig.pic32cxsg"
 rsource "Kconfig.psoc6"
 
 rsource "Kconfig.pl011"
