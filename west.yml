@@ -23,6 +23,8 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: babblesim
       url-base: https://github.com/BabbleSim
+    - name: chris
+      url-base: https://github.com/csmith20
 
   group-filter: [-babblesim, -optional]
 
@@ -144,7 +146,8 @@ manifest:
         - hal
 
     - name: hal_microchip
-      revision: 71eba057c0cb7fc11b6f33eb40a82f1ebe2c571c
+      remote: chris
+      revision: pic32cxsg
       path: modules/hal/microchip
       groups:
         - hal
