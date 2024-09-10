@@ -1,0 +1,23 @@
+# Microchip PIC32CXSG41 MCU series
+
+# Copyright (c) 2024 Microchip
+
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_SERIES_PIC32CXBZ2
+	bool
+	select SOC_FAMILY_MICROCHIP_PIC32CXBZ
+	help
+	  Enable support for Microchip PIC32CXBZ2 Cortex-M4F microcontrollers.
+	  Part No.: PIC32CX1012BZ25048
+
+config SOC_SERIES
+	default "pic32cxbz2" if SOC_SERIES_PIC32CXBZ2
+
+config SOC_PIC32CX1012BZ25048
+	bool
+	select SOC_SERIES_PIC32CXBZ2
+
+config SOC
+	default "pic32cx1012bz25048" if SOC_PIC32CX1012BZ25048
+

@@ -1,0 +1,5 @@
+board:
+  name: pic32cxbz2_curiosity
+  vendor: microchip
+  socs:
+    - name: pic32cx1012bz25048
