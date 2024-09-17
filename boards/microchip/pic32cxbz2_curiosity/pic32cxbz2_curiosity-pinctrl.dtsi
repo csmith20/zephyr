@@ -53,11 +53,18 @@
 				 <PB13C_SERCOM4_PAD1>;
 		};
 	};
-	
+	/*
 	sercom0_uart_default: sercom0_uart_default {
 		group1 {
 			pinmux = <PB12C_SERCOM4_PAD0>,
 				 <PB13C_SERCOM4_PAD1>;
+		};
+	};*/
+	
+	sercom0_uart_default: sercom0_uart_default {
+		group1 {
+			pinmux = <PB24C_SERCOM0_PAD0>,
+				 <PB25C_SERCOM0_PAD1>;
 		};
 	};
 

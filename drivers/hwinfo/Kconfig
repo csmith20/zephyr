@@ -150,6 +150,13 @@ config HWINFO_PIC32CXSG_RSTC
 	depends on SOC_FAMILY_MICROCHIP_PIC32CXSG
 	help
 	  Enable Microchip PIC32CXSG reset cause hwinfo driver.
+	  
+config HWINFO_PIC32CXBZ2_RSTC
+	bool "Microchip PIC32CXBZ2 reset cause"
+	default y
+	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ2
+	help
+	  Enable Microchip PIC32CXBZ2 reset cause hwinfo driver.
 
 config HWINFO_SAM
 	bool "Atmel SAM device ID"
@@ -181,6 +188,13 @@ config HWINFO_PIC32CXSG
 	depends on SOC_FAMILY_MICROCHIP_PIC32CXSG
 	help
 	  Enable Microchip PIC32CXSG hwinfo driver.
+	  
+config HWINFO_PIC32CXBZ2
+	bool "Microchip PIC32CXBZ2 device ID"
+	default y
+	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ2
+	help
+	  Enable Microchip PIC32CXBZ2 hwinfo driver.
 
 config HWINFO_SMARTBOND
 	bool "Smartbond device reset cause"

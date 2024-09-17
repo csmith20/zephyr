@@ -1,25 +1,25 @@
 .. _pic32cxbz2_curiosity:
 
-PIC32CX SG41 Curiosity Ultra Evaluation Kit
+PIC32CX BZ2 Curiosity Ultra Evaluation Kit
 ###################################
 
 Overview
 ********
 
-The PIC32CX SG41 Curiosity Ultra evaluation kit is ideal for evaluation and
+The PIC32CX BZ2 Curiosity Ultra evaluation kit is ideal for evaluation and
 prototyping with the PIC32CX SG Cortex®-M4F processor-based
 microcontrollers. The kit includes Microchip’s Embedded Debugger (EDBG),
 which provides a full debug interface without the need for additional
 hardware.
 
-.. image:: img/pic32cx_sg41_cult.jpg
+.. image:: img/pic32cx_BZ2_cult.jpg
      :align: center
      :alt: PIC32CX-CULT
 
 Hardware
 ********
 
-- PIC32CX1025SG41 ARM Cortex-M4F processor at 120 MHz
+- PIC32CX1012BZ25048 ARM Cortex-M4F processor at 128 MHz
 - 32.768 kHz crystal oscillator
 - 12 MHz crystal oscillator
 - 1024 KiB flash memory and 256 KiB of RAM
@@ -42,7 +42,7 @@ Hardware
 Supported Features
 ==================
 
-The pic32cxsg41_cult board configuration supports the following hardware
+The pic32cxBZ2_cult board configuration supports the following hardware
 features:
 
 +---------------+------------+----------------------------+
@@ -96,28 +96,28 @@ features:
 Other hardware features are not currently supported by Zephyr.
 
 The default configuration can be found in the Kconfig
-:zephyr_file:`boards/microchip/pic32cxsg41_cult/pic32cxsg41_cult_defconfig`.
+:zephyr_file:`boards/microchip/pic32cxbz2_curiosity/pic32cxbz2_curiosity_defconfig`.
 
 Pin Mapping
 ===========
 
-The Microchip PIC32CXSG41 Curiosity Ultra evaluation kit has 4 GPIO controllers. These
+The Microchip PIC32CXBZ2 Curiosity Ultra evaluation kit has 4 GPIO controllers. These
 controllers are responsible for pin muxing, input/output, pull-up, etc.
 
-For more details please refer to `Microchip PIC32CX SG41/SG60/SG61 Family Datasheet`_ and 
-the `Microchip PIC32CXSG41 Curiosity Ultra Schematic`_.
+For more details please refer to `Microchip PIC32CX BZ2/SG60/SG61 Family Datasheet`_ and 
+the `Microchip PIC32CXBZ2 Curiosity Ultra Schematic`_.
 
-.. image:: img/PIC32CXSG41-pinout1.jpg
+.. image:: img/PIC32CXBZ2-pinout1.jpg
      :align: center
-     :alt: PIC32CXSG41-CULT-pinout1
+     :alt: PIC32CXBZ2-CULT-pinout1
 
-.. image:: img/PIC32CXSG41-pinout2.jpg
+.. image:: img/PIC32CXBZ2-pinout2.jpg
      :align: center
-     :alt: PIC32CXSG41-CULT-pinout2
+     :alt: PIC32CXBZ2-CULT-pinout2
 
-.. image:: img/PIC32CXSG41-pinout3.jpg
+.. image:: img/PIC32CXBZ2-pinout3.jpg
      :align: center
-     :alt: PIC32CXSG41-CULT-pinout3
+     :alt: PIC32CXBZ2-CULT-pinout3
 
 Default Zephyr Peripheral Mapping:
 ----------------------------------
@@ -149,13 +149,13 @@ Default Zephyr Peripheral Mapping:
 System Clock
 ============
 
-The PIC32CXSG41 MCU is configured to use the 32.768 kHz external oscillator
+The PIC32CXBZ2 MCU is configured to use the 32.768 kHz external oscillator
 with the on-chip PLL generating the 48 MHz system clock.
 
 Serial Port
 ===========
 
-The PIC32CXSG41 MCU has 8 SERCOM based USARTs with one configured as USARTs in
+The PIC32CXBZ2 MCU has 8 SERCOM based USARTs with one configured as USARTs in
 this BSP. SERCOM4 is the default Zephyr console.
 
 - SERCOM4 115200 8n1 connected to the onboard Atmel Embedded Debugger (EDBG)
@@ -163,26 +163,26 @@ this BSP. SERCOM4 is the default Zephyr console.
 PWM
 ===
 
-The PIC32CXSG41 MCU has 5 TCC based PWM units with up to 6 outputs each and a period
+The PIC32CXBZ2 MCU has 5 TCC based PWM units with up to 6 outputs each and a period
 of 24 bits or 16 bits.  If :code:`CONFIG_PWM_PIC32CXSG_TCC` is enabled then LED0 is
 driven by TCC0 instead of by GPIO.
 
 SPI Port
 ========
 
-The PIC32CXSG41 MCU has 8 SERCOM based SPIs.
+The PIC32CXBZ2 MCU has 8 SERCOM based SPIs.
 
 I2C Port
 ========
 
-The PIC32CXSG41 MCU has 8 SERCOM based I2Cs. On the Microchip PIC32CXSG41 Curiosity Ultra,
+The PIC32CXBZ2 MCU has 8 SERCOM based I2Cs. On the Microchip PIC32CXBZ2 Curiosity Ultra,
 SERCOM7 is connected to a AT24MAC402 EEPROM.
 
 Programming and Debugging
 *************************
 
-The Microchip PIC32CXSG41 Curiosity Ultra comes with a Atmel Embedded Debugger (EDBG).  
-This provides a debug interface to the PIC32CXSG41 chip and is supported by OpenOCD.
+The Microchip PIC32CXBZ2 Curiosity Ultra comes with a Atmel Embedded Debugger (EDBG).  
+This provides a debug interface to the PIC32CXBZ2 chip and is supported by OpenOCD.
 
 Flashing
 ========
@@ -195,7 +195,7 @@ Flashing
       :goals: build
       :compact:
 
-#. Connect the Microchip PIC32CXSG41 Curiosity Ultra to your host computer using the USB debug
+#. Connect the Microchip PIC32CXBZ2 Curiosity Ultra to your host computer using the USB debug
    port.
 
 #. Run your favorite terminal program to listen for output. Under Linux the
@@ -231,5 +231,5 @@ References
 .. _Microchip website:
 	https://www.microchip.com/en-us/development-tool/EV06X38A
     
-.. _PIC32CX SG41/SG60/SG61 Family Datasheet:
-	https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/PIC32CX-SG41-SG60-SG61-Family-Data-Sheet-DS60001715.pdf
+.. _PIC32CX BZ2/SG60/SG61 Family Datasheet:
+	https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/PIC32CX-BZ2-SG60-SG61-Family-Data-Sheet-DS60001715.pdf

@@ -1,7 +1,8 @@
 # Copyright (c) 2024 Microchip
 # SPDX-License-Identifier: Apache-2.0
 
-if CONFIG_SOC_FAMILY_MICROCHIP_PIC32CXBZ2
+#if CONFIG_SOC_FAMILY_MICROCHIP_PIC32CXBZ2
+#if CONFIG_SOC_SERIES_PIC32CXBZ2
 
 config SOC_MICROCHIP_PIC32CXBZ2_XOSC32K
 	bool "The external 32 kHz crystal oscillator"
@@ -32,4 +33,4 @@ config SOC_MICROCHIP_PIC32CXBZ2_OSCULP32K_AS_MAIN
 
 endchoice
 
-endif
+#endif

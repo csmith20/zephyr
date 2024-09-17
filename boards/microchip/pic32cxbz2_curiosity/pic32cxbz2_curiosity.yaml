@@ -9,7 +9,7 @@ toolchain:
   - gnuarmemb
   - xtools
 flash: 1024
-ram: 256
+ram: 128
 supported:
   - adc
   - flash

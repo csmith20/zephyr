@@ -1,0 +1,15 @@
+description: Atmel SAM0 multi-protocol (UART, SPI, I2C) SERCOM unit
+
+compatible: "atmel,pic32cxbz2-sercom"
+
+include: base.yaml
+
+properties:
+  reg:
+    required: true
+
+  interrupts:
+    required: true
+
+  clocks:
+    required: false

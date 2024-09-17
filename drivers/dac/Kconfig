@@ -39,6 +39,8 @@ source "drivers/dac/Kconfig.sam0"
 
 source "drivers/dac/Kconfig.pic32cxsg"
 
+source "drivers/dac/Kconfig.pic32cxbz2"
+
 source "drivers/dac/Kconfig.dacx0501"
 
 source "drivers/dac/Kconfig.dacx0508"

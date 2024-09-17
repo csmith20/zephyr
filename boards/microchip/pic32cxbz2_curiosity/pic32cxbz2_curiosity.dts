@@ -6,12 +6,12 @@
 
 /dts-v1/;
 #include <microchip/pic32cx1012bz2.dtsi>
-#include "pic32cxbz2_curiosity-pinctrl.dtsi"
+/*#include "pic32cxbz2_curiosity-pinctrl.dtsi"*/
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
 	model = "PIC32CX BZ2 Curiosity";
-	compatible = "pic32cxbz2,cult", "microchip,pic32cx1012bz25048", "microchip,pic32cxbz2";
+	compatible = "pic32cxbz2,curiosity", "microchip,pic32cx1012bz25048", "microchip,pic32cxbz2";
 
 	chosen {
 		zephyr,console = &sercom0;
@@ -22,14 +22,14 @@
 
 	/* These aliases are provided for compatibility with samples */
 	aliases {
-		userled1 = &led1;
+		/*userled1 = &led1;
 		userled2 = &led2; 
 		pwm-led1 = &pwm_led1;
 		sw1 = &button1;
 		sw2 = &button2;
-		i2c-0 = &sercom1;
+		i2c-0 = &sercom1;*/
 	};
-
+/*
 	leds {
 		compatible = "gpio-leds";
 		led1: led_1 {
@@ -62,23 +62,25 @@
 			zephyr,code = <INPUT_KEY_2>;
 		};
 	};
+*/	
 };
 
 &cpu0 {
-	clock-frequency = <128000000>;
+	clock-frequency = <64000000>;
 };
 
+
+/*
 &tcc0 {
 	status = "okay";
 	compatible = "atmel,sam0-tcc-pwm";
-	/* Gives a maximum period of 1.1s for 120MHz main clock */
 	prescaler = <8>;
 	#pwm-cells = <2>;
 
 	pinctrl-0 = <&pwm_default>;
 	pinctrl-names = "default";
 };
-/*
+
 &sercom4 {
 	status = "okay";
 	compatible = "atmel,sam0-uart";
@@ -92,19 +94,26 @@
 	pinctrl-names = "default";
 };
 */
+
+
+
+
+
+
+
 &sercom0 {
 	status = "okay";
-	compatible = "atmel,sam0-uart";
-	current-speed = <115200>;
-	rxpo = <1>;
-	txpo = <0>;
-	#address-cells = <1>;
-	#size-cells = <0>;
+	compatible = "microchip,pic32cxbz2-uart";
 
-	pinctrl-0 = <&sercom0_uart_default>;
-	pinctrl-names = "default";
+	
+	current-speed = <115200>;
+
 };
 
+
+
+
+/*
 &sercom1 {
 	status = "okay";
 	compatible = "atmel,sam0-i2c";
@@ -125,14 +134,15 @@
 	status = "okay";
 };
 
-/*
+
 zephyr_udc0: &usb0 {
 	status = "okay";
 
 	pinctrl-0 = <&usb_dc_default>;
 	pinctrl-names = "default";
 };
-*/
+
+
 &gmac {
 	status = "okay";
 
@@ -155,6 +165,7 @@ zephyr_udc0: &usb0 {
 		reg = <0>;
 	};
 };
+*/
 
 &flash0 {
 	partitions {

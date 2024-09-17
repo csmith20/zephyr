@@ -1,0 +1,7 @@
+family:
+- name: microchip_pic32bz2
+  series:
+  - name: pic32cxbz2
+    socs:
+    - name: pic32cx1012bz25048
+

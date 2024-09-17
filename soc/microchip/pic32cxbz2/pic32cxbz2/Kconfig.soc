@@ -6,10 +6,9 @@
 
 config SOC_SERIES_PIC32CXBZ2
 	bool
-	select SOC_FAMILY_MICROCHIP_PIC32CXBZ
+	select SOC_FAMILY_MICROCHIP_PIC32CXBZ2
 	help
 	  Enable support for Microchip PIC32CXBZ2 Cortex-M4F microcontrollers.
-	  Part No.: PIC32CX1012BZ25048
 
 config SOC_SERIES
 	default "pic32cxbz2" if SOC_SERIES_PIC32CXBZ2
