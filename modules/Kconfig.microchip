@@ -22,3 +22,8 @@ config HAS_PIC32CXSG_HAL
 	bool "Microchip PIC32CXSG HAL drivers support"
 	select HAS_CMSIS_CORE
 	depends on SOC_FAMILY_MICROCHIP_PIC32CXSG
+
+config HAS_PIC32CXBZ2_HAL
+	bool "Microchip PIC32CXBZ2 HAL drivers support"
+	select HAS_CMSIS_CORE
+	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ2
