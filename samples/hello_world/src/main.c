@@ -5,10 +5,20 @@
  */
 
 #include <stdio.h>
+#include "rf_system.h"
 
 int main(void)
 {
-	printf("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	
+	// Initialize the RF Clock Generator
+    SYS_ClkGen_Config();
+ 
+    // Initialize RF System
+    SYS_Load_Cal(WSS_ENABLE_BLE);
+ 
+	
+	printf("Hello World 35! %s\n", CONFIG_BOARD_TARGET);
 
+    while(1);
 	return 0;
 }
