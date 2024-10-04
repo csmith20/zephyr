@@ -1,43 +1,51 @@
 .. _pic32cxbz2_curiosity:
 
-PIC32CX BZ2 Curiosity Ultra Evaluation Kit
+WBZ451 Curiosity Board Evaluation Kit
 ###################################
 
 Overview
 ********
 
-The PIC32CX BZ2 Curiosity Ultra evaluation kit is ideal for evaluation and
-prototyping with the PIC32CX SG Cortex®-M4F processor-based
-microcontrollers. The kit includes Microchip’s Embedded Debugger (EDBG),
-which provides a full debug interface without the need for additional
-hardware.
+The WBZ451 Curiosity Board is an efficient and modular development platform
+that supports rapid prototyping and demonstrates the features, capabilities
+and interfaces of Microchip's Bluetooth® Low Energy and Zigbee RF Module (WBZ451PE).
 
-.. image:: img/pic32cx_BZ2_cult.jpg
+The WBZ451 Curiosity Board:
+• Offers integrated programming/debugging features using the PICkitTM On-board 4 (PKOB4)
+  debugger interface
+• Requires only a Micro USB cable to power-up and program the board
+• Includes a mikroBUSTM ClickTM header, which helps the users to expand the functionalities
+  by connecting to various MikroElectronika mikroBUS Click adapter boards
+• Performs rapid prototyping utilizing the Bluetooth Low Energy and Zigbee-enabled RF Module
+
+The WBZ451 Curiosity Board supports a variety of applications:
+• Wireless lighting
+• Home automation or Internet of Things (IoT)
+• Industrial automation
+• Other Bluetooth Low Energy or Zigbee-related applications
+
+
+.. image:: img/ev96b94a-front.jpeg
      :align: center
-     :alt: PIC32CX-CULT
+     :alt: WBZ451-CULT
 
 Hardware
 ********
 
-- PIC32CX1012BZ25048 ARM Cortex-M4F processor at 128 MHz
-- 32.768 kHz crystal oscillator
-- 12 MHz crystal oscillator
-- 1024 KiB flash memory and 256 KiB of RAM
-- Two yellow user LEDs
-- Two mechanical user push buttons
-- One reset button
-- On-board USB based EDBG unit with serial console
-- Embedded Debugger MCU (PKoB4)
-- 64 Mbit QSPI Flash
-- AT24MAC402 serial EEPROM with EUI-48™ MAC address
-- Ethernet transceiver 10/100 Mbps Ethernet MAC, 
-  compatible with the IEEE 802.3 standard.
-- Arduino Uno header connectors
-- X32 Audio Interface Headers
-- mikroBUS header connectors
-- DAC Output header
-- USB interface, host, and device
-- SD/SDIO card connector
+- WBZ451PE Bluetooth Low Energy and Zigbee RF Module
+- USB or Li-Po Battery Powered
+- On-board Programmer/Debug Circuit using PKoB4 based on Microchip SAME70 MCU
+- Microchip MCP73871 Li-Ion/LiPo Battery Charger with Power Path Management
+- On-board USB to UART Serial Converter with Hardware Flow Control based on Microchip MCP2200
+- mikroBUS Socket to Expand Functionality using MikroElectronika Click Adapter Boards
+- RGB LED Connected to Pulse Width Modulation (PWM)
+- One Reset Switch
+- One User Configurable Switch
+- One User LED
+- 32.768 kHz Crystal
+- Microchip SST26VF064B, 64-Mbit External QSPI Flash Memory
+- Microchip MCP9700A, Low Power Analog Voltage Temperature Sensor
+- 10-pin ARM Serial Wire Debug (SWD) Header for External Programmer/Debugger
 
 Supported Features
 ==================
@@ -88,8 +96,6 @@ features:
 +---------------+------------+----------------------------+
 | TRNG          | on-chip    | entropy                    |
 +---------------+------------+----------------------------+
-| USB           | on-chip    | usb                        |
-+---------------+------------+----------------------------+
 | WDT           | on-chip    | watchdog                   |
 +---------------+------------+----------------------------+
 
@@ -107,17 +113,17 @@ controllers are responsible for pin muxing, input/output, pull-up, etc.
 For more details please refer to `Microchip PIC32CX BZ2/SG60/SG61 Family Datasheet`_ and 
 the `Microchip PIC32CXBZ2 Curiosity Ultra Schematic`_.
 
-.. image:: img/PIC32CXBZ2-pinout1.jpg
+.. image:: img/wbz451_curiosity_front.jpg
      :align: center
-     :alt: PIC32CXBZ2-CULT-pinout1
+     :alt: WBZ451-Curiosity-front
 
-.. image:: img/PIC32CXBZ2-pinout2.jpg
+.. image:: img/wbz451_curiosity_back.jpg
      :align: center
-     :alt: PIC32CXBZ2-CULT-pinout2
+     :alt: WBZ451-Curiosity-back
 
-.. image:: img/PIC32CXBZ2-pinout3.jpg
+.. image:: img/wbz451_curiosity_block.jpg
      :align: center
-     :alt: PIC32CXBZ2-CULT-pinout3
+     :alt: WBZ451-Curiosity-block
 
 Default Zephyr Peripheral Mapping:
 ----------------------------------
@@ -127,24 +133,10 @@ Default Zephyr Peripheral Mapping:
 - GPIO/PWM LED2    : PA16
 - GPIO SW1         : PD00
 - GPIO SW2         : PD01
-- GMAC RMII REFCK  : PA14
-- GMAC RMII TXEN   : PA17
-- GMAC RMII TXD0   : PA18
-- GMAC RMII TXD1   : PA19
-- GMAC RMII CRSDV  : PC20
-- GMAC RMII RXD0   : PA13
-- GMAC RMII RXD1   : PA12
-- GMAC RMII RXER   : PA15
-- GMAC MDIO MDC    : PC11
-- GMAC MDIO MDIO   : PC12
 - SERCOM0 SPI SCK  : PB24
 - SERCOM0 SPI MOSI : PB25
 - SERCOM0 SPI MISO : PC25	
 - SERCOM0 SPI SS   : PC24
-- SERCOM7 I2C SDA  : PD08
-- SERCOM7 I2C SCL  : PD09
-- USB DP           : PA25
-- USB DM           : PA24
 
 System Clock
 ============
@@ -181,7 +173,8 @@ SERCOM7 is connected to a AT24MAC402 EEPROM.
 Programming and Debugging
 *************************
 
-The Microchip PIC32CXBZ2 Curiosity Ultra comes with a Atmel Embedded Debugger (EDBG).  
+The Microchip WBZ451 Curiosity Board comes with On-board Programmer/Debug Circuit using PKoB4
+based on Microchip SAME70 MCU.  
 This provides a debug interface to the PIC32CXBZ2 chip and is supported by OpenOCD.
 
 Flashing
@@ -195,7 +188,7 @@ Flashing
       :goals: build
       :compact:
 
-#. Connect the Microchip PIC32CXBZ2 Curiosity Ultra to your host computer using the USB debug
+#. Connect the Microchip WBZ451 Curiosity Board to your host computer using the USB debug
    port.
 
 #. Run your favorite terminal program to listen for output. Under Linux the
@@ -229,7 +222,7 @@ References
 .. target-notes::
 
 .. _Microchip website:
-	https://www.microchip.com/en-us/development-tool/EV06X38A
+   https://www.microchip.com/en-us/development-tool/ev96b94a
     
-.. _PIC32CX BZ2/SG60/SG61 Family Datasheet:
-	https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/PIC32CX-BZ2-SG60-SG61-Family-Data-Sheet-DS60001715.pdf
+.. _PIC32CX-BZ2 and WBZ45 Family Datasheet:
+	https://ww1.microchip.com/downloads/aemDocuments/documents/WSG/ProductDocuments/DataSheets/PIC32CX-BZ2-and-WBZ45-Family-Data-Sheet-DS70005504.pdf
