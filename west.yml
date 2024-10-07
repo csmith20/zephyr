@@ -152,6 +152,12 @@ manifest:
       groups:
         - hal
 
+    - name: zephyr_applications
+      remote: chris
+      revision: main
+      path: applications
+
+
     - name: hostap
       path: modules/lib/hostap
       revision: 7761b17eea9a2442af6ea9df830904fa4ba7bbca
