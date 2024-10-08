@@ -154,7 +154,7 @@ config HWINFO_PIC32CXSG_RSTC
 config HWINFO_PIC32CXBZ2_RSTC
 	bool "Microchip PIC32CXBZ2 reset cause"
 	default y
-	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ2
+	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ
 	help
 	  Enable Microchip PIC32CXBZ2 reset cause hwinfo driver.
 
@@ -192,7 +192,7 @@ config HWINFO_PIC32CXSG
 config HWINFO_PIC32CXBZ2
 	bool "Microchip PIC32CXBZ2 device ID"
 	default y
-	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ2
+	depends on SOC_FAMILY_MICROCHIP_PIC32CXBZ
 	help
 	  Enable Microchip PIC32CXBZ2 hwinfo driver.
 
